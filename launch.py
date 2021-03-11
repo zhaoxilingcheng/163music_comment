@@ -57,6 +57,7 @@ def get_comment_data(comment):
     c = Comment()
     c.content = comment['content']
     c.like_count = comment['likedCount']
+    c.comment_id = comment['commentId']
     c.simHash = Simhash(jieba.lcut(comment['content'], cut_all=True)).value
     return c
 
